@@ -1,0 +1,513 @@
+.van-field__label {
+  text-align: left;
+}
+.fd-theme {background-color: #006CD1;border: 0}
+//.cardId {
+//  width: 50%;
+//  &.addInfo {
+//    .van-uploader__wrapper {
+//      margin: 0 !important;
+//    }
+//  }
+//  .van-uploader__input-wrapper {
+//    width: 100%;
+//    height: 125px;
+//  }
+//  .van-uploader__wrapper {
+//    height: 125px;
+//    margin-right: 5px;
+//    .van-uploader__preview {
+//      width: 100%;
+//      height: 100%;
+//      margin: 0;
+//      .van-uploader__preview-image {
+//        width: 100%;
+//        height: 100%;
+//      }
+//    }
+//  }
+//  .van-uploader__preview-delete {
+//    font-size: 20px;
+//  }
+//  &:last-child {
+//    .van-uploader__wrapper {
+//      margin-right: 0;
+//      margin-left: 5px;
+//    }
+//  }
+//}
+.upImg {
+  width: 100%;
+  .van-uploader__wrapper {
+    width: 100%;
+    height: auto;
+    //margin: 0 -5px !important;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    .van-uploader__preview {
+      width: 49%;
+      height: 125px;
+      box-sizing: border-box;
+      border: 1px solid #f2f2f2;
+      //padding: 5px;
+      margin: 0 0 10px 0;
+      .van-uploader__preview-delete {
+        font-size: 20px;
+      }
+      .van-uploader__preview-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .van-uploader__input-wrapper {
+      width: 49%;
+      height: 125px;
+      //padding: 5px;
+      margin: 0;
+      box-sizing: border-box;
+      .upCard {
+      }
+    }
+  }
+}
+.form-btn {
+  padding: 0 15px;
+  .btn {
+    width: 100%;
+    margin: 20px 0;
+    background-color: #006CD1;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 15px 0;
+    line-height: 1;
+  }
+}
+.menber-list {
+  .van-cell__title {
+    text-align: left;
+  }
+}
+.van-cell:not(:last-child)::after {
+  left: 0 !important;
+}
+//  公司审核轮播样式
+.firm-swiper {
+  .van-swipe__indicator--active {
+    background-color: #fff;
+  }
+}
+//  搜索框
+.search-box {
+  height: 44px;
+  background-color: #fff;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  .selectBtn {
+    width: 110px;
+    padding: 0 12px;
+    font-size: 14px;
+    position: relative;
+    text-align: center;
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border-width: 4px 4px 0;
+      border-style: solid;
+      border-color: #666 transparent transparent;
+      transform: translateY(-50%);
+    }
+  }
+  .hr {
+    width: 1px;
+    height: 13px;
+    background-color: #eee;
+    margin: 0 12px;
+    box-shadow: none;
+    border: none;
+  }
+}
+//  banner样式修改
+.cy-swiper {
+  .van-swipe__indicators {
+    bottom: 60px;
+    .van-swipe__indicator {
+      width: 8px;
+      height: 3px;
+      border-radius: 1px;
+      &.van-swipe__indicator--active {
+        background-color: #fff;
+      }
+    }
+  }
+}
+//  tab选项卡样式
+.cy-tabs {
+  &.white {
+    .van-tabs__nav {
+      background-color: #fff;
+    }
+  }
+  .van-tabs__nav {
+    background-color: #f2f2f2;
+  }
+  .van-tab--active {
+    color: #006CD1;
+  }
+  .van-tabs__line {
+    background-color: #006CD1;
+  }
+}
+//  列表页样式
+.tab-con-list {
+  .tab-con-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    background-color: #fff;
+    .item-one {
+      display: flex;
+      .text-box {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .img-list {
+        width: 112.5px;
+        height: 100%;
+        .img {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+    }
+    .item-two {
+      width: 100%;
+      display: inline-block;
+      .img-box {
+        display: flex;
+        justify-content: space-between;
+        padding: .1rem 0;
+        .img-list {
+          width: 112.5px;
+          height: 100%;
+          .img {
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+        }
+      }
+    }
+    .title {
+      color: #1e1010;
+      font-size: 16px;
+      font-weight: initial;
+      line-height: 1.4;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-align: left;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      word-break: break-all;
+    }
+    .time {
+      width: 100%;
+      font-size: 12px;
+      color: #999;
+      margin-top: 10px;
+      line-height: 1;
+      text-align: left;
+      display: inline-block;
+      //transform: scale(.95);
+      transform: translateX(0);
+    }
+  }
+}
+//  新闻详情页
+.chrray_details {
+  padding: 15px;
+  background-color: #fff;
+  .page_title-con {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    .title {
+      font-size: 18px;
+      color: #1e1010;
+      line-height: 1.5;
+      font-weight: bold;
+    }
+    .time-box {
+      display: flex;
+      align-items: center;
+      .time {
+        font-size: 12px;
+        display: inline-block;
+        color: #999;
+        font-weight: normal;
+        line-height: 1;
+        margin-top: 20px;
+      }
+    }
+  }
+  .page_contant-con {
+    .video-box {
+      width: 100%;
+      video {
+        width: 100%;
+      }
+    }
+    .con {
+      margin-top: 15px;
+      text-align: left;
+      img {
+        width: 100%;
+        display: block;
+        margin: 15px 0;
+      }
+      p {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.5;
+      }
+    }
+    .fujian-box {
+      padding: 20px 0;
+      .fujian {
+        line-height: 1.5;
+        font-size: 15px;
+        color: #333;
+        display: flex;
+        align-items: flex-start;
+        a {
+          flex: 1;
+          text-decoration: none;
+          color: #006CD1;
+          text-align: left;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+//  用户中心
+.icon-box {
+  .icon {
+    padding-right: 5px;
+  }
+}
+//  个人办事流程样式
+.cy-cell {
+  &.start {
+    .van-cell__value {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+}
+.pd-45 {
+  .van-tab__pane {
+    padding-bottom: 50px;
+  }
+}
+  //年月日时选择
+.timeStyle {
+  .van-picker__columns {
+    .van-picker-column {
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+}
+//  资料上传
+.upInfo-box {
+  .cy-upload-panel {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #fff;
+    &:first-child {
+      margin-top: 0;
+    }
+    .cy-upload-title {
+      font-size: 15px;
+      color: #333;
+      display: inline-block;
+    }
+  }
+}
+//  上传身份证修改样式
+.upimg-box {
+  margin: 0 -5px;
+  overflow: hidden;
+  .img-box-item {
+    width: 50%;
+    float: left;
+    margin: 0;
+    .chrray-uploader {
+      width: 100%;
+    }
+    .chrray-uploader_preview {
+      width: 100%;
+    }
+  }
+}
+//  tabs样式
+.chrray-tabs {
+  .van-tabs__line {
+    background-color: #006CD1;
+  }
+}
+//  面板样式
+.chrray-panel{
+  margin-top: 10px;
+  padding: 15px 15px 5px;
+  .van-panel__footer {
+    text-align: right;
+    padding: 8px 0px 5px;
+  }
+}
+// 预约状态，审核状态样式
+.chrray-main {
+  .chrray-word-status {
+    background-color: #fff;
+    border-radius: 5px;
+    .word-status-head {
+      text-align: center;
+      border-bottom: 5px dotted #f2f2f2;
+      padding: 15px 55px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 16PX;
+        height: 16PX;
+        border-radius: 50%;
+        background-color: #f2f2f2;
+        left: -8px;
+        bottom: -10px;
+      }
+      &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 16PX;
+        height: 16PX;
+        border-radius: 50%;
+        background-color: #f2f2f2;
+        right: -8px;
+        bottom: -10px;
+      }
+    }
+    .word-status-footer{
+      .footer-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .title {
+          margin: 0;
+          font-size: 15px;
+          line-height: 1;
+        }
+        .des-box {
+          flex: 1;
+          position: relative;
+          .text {
+            color: #333;
+            font-size: 15px;
+            line-height: 1;
+            text-align: right;
+            margin-bottom: 15px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          .addres {
+            color: #666;
+            font-size: 14px;
+            line-height: 1;
+            text-align: right;
+            margin-bottom: 15px;
+            display: block;
+          }
+          .phone {
+            padding: 0;
+            .addres
+          }
+          .img {
+            width: 67px;
+            height: 41px;
+            object-fit: cover;
+            display: block;
+            float: right;
+          }
+          .number {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            line-height: 1;
+            padding: 3px 8px;
+            color: #fff;
+            font-size: 12px;
+            background-color: rgba(0, 0, 0, .5);
+          }
+        }
+      }
+    }
+  }
+  .sub-btn {
+    width: 100%;
+    box-sizing: border-box;
+    border-style: none;
+    //padding: 18px 115px 17px 114px;
+    border-radius: 2000px;
+    background-color: #3679FF;
+    font-size: 15px;
+    color: #fff;
+  }
+}
+//  培训学校详情
+.chrray-html {
+  background-color: #fff;
+  padding: 15px;
+  img {
+    max-width: 100% !important;
+    display: block;
+    padding: 0.26667rem 0;
+    margin: 0 auto;
+  }
+  p {
+    word-break: break-word;
+  }
+}
+//  卡片样式修改
+.chrray-card {
+  .van-card__thumb {
+    width: auto;
+    height: auto;
+  }
+  .van-card__content {
+    min-height: auto;
+  }
+}

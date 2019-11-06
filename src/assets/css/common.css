@@ -1,0 +1,30 @@
+a {text-decoration: none;}
+p {margin: 0;}
+
+.chrray-img {
+  display: block;
+}
+.all {
+  font-size: 14px;
+  color: #006CD1;
+}
+/* 改变checkbox默认样式 */
+input.cy_checkbox[type='checkbox'] {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  -webkit-appearance:none;
+  border: 1PX solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  display: inline-block;
+}
+input.cy_checkbox[type=checkbox]:checked{
+  background-image: url("../img/check.png");
+  background-size: cover;
+  border: none;
+  /*background: url("../img/check.png")no-repeat center center;*/
+}
+/* end */
