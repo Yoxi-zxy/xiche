@@ -8,23 +8,46 @@ p {margin: 0;}
   font-size: 14px;
   color: #006CD1;
 }
-/* 改变checkbox默认样式 */
-input.cy_checkbox[type='checkbox'] {
-  width: 14px;
-  height: 14px;
-  background-color: #fff;
-  -webkit-appearance:none;
-  border: 1PX solid #ccc;
-  border-radius: 2px;
-  box-sizing: border-box;
-  outline: none;
-  margin: 0;
-  display: inline-block;
+.main {
+  background-color: #ffffff;
 }
-input.cy_checkbox[type=checkbox]:checked{
-  background-image: url("../img/check.png");
-  background-size: cover;
-  border: none;
-  /*background: url("../img/check.png")no-repeat center center;*/
+.mg-bt {
+  padding-bottom: 50px;
+}
+.vh {
+  height: 100vh;
+}
+.footer-btn {
+  position: fixed;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  z-index: 1000;
+  border-style: none;
+  padding: 15px 0;
+  bottom: 0;
+}
+.con {
+  padding: 15px;
+}
+.add:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  transform: scaleY(.5);
+  background-color: #f2f2f2;
+  bottom: 0;
+  left: 0;
+ }
+.cont {
+  background-color: #f2f2f2;
+  height: 100%;
+  padding-bottom: 50px
+}
+.user-box {
+  box-sizing: border-box;
+  margin: 15px;
+  background-color: white;
 }
 /* end */

@@ -19,7 +19,7 @@ class HttpRequest {
   interceptors (instance, url) {
     //  请求拦截器
     instance.interceptors.request.use(config => {
-      config.url = '/api' + config.url
+      config.url = '/api/' + config.url
       //  添加全局loading...
       // if (!Object.keys(this.queue).length) {
       //   Toast.loading({
@@ -41,7 +41,7 @@ class HttpRequest {
       //     Toast.clear()
       //   }, 1000)
       // }
-      if (res.data.success) {
+      if (res.data.code === '2000') {
         return res.data
       } else {
         return Promise.reject(res.data)

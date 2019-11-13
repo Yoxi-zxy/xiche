@@ -5,8 +5,6 @@ import store from '@/store'
 import { getToken } from '../lib/util'
 import { Dialog, Toast } from 'vant'
 import { loginUrl } from '@/config/baseURL'
-//  跳转获取签名
-import wxApi from '@/utils/weixin'
 Vue.use(Router)
 const router = new Router({
   mode: 'history',
@@ -22,16 +20,6 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   const Token = getToken()
-  let shareData = {
-    title: to.meta.title,
-    link: location.href
-  }
-  let url = location.protocol + '//' + location.host + to.fullPath
-  wxApi.wxConfig(url)
-  // if (to.meta.title) {
-  // wxApi.share(to.meta.title, that.getSimpleText(res.data.newContext), location.href, res.data.imageList.length > 0 ? imgUrl + res.data.imageList[0].imageUrl : loginUrl)
-  wxApi.share(shareData)
-  // }
   if (to.meta.isToken) {
     if (Token) {
       store.dispatch('authorization', Token).then(() => {
