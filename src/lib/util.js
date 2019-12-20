@@ -1,10 +1,10 @@
 //  设置token
-export const setToken = (token, tokenId = 'tokenId') => {
-  localStorage.setItem(tokenId, token)
+export const setToken = (tokenId, openId) => {
+  localStorage.setItem(tokenId, openId)
 }
 //  获取token
-export const getToken = (tokenId = 'tokenId') => {
-  return localStorage.getItem(tokenId)
+export const getToken = (openId) => {
+  return localStorage.getItem(openId)
 }
 //  获取url参数
 export const getRequest = () => {

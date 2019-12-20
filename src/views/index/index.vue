@@ -58,6 +58,7 @@
 <script>
 import { Tabbar, TabbarItem, List, Cell, Icon } from 'vant';
 import api from '@/api/data';
+import { getRequest, setToken } from '@/lib/util'
 export default {
   data () {
     return {
@@ -65,7 +66,8 @@ export default {
       loading: false,
       finished: false,
       pageInfo: { page: 1 },
-      error: false
+      error: false,
+      userMsg: {}
     }
   },
   components: {
@@ -80,7 +82,13 @@ export default {
     this.getShopList()
   },
   mounted () {
-    //
+    let that = this;
+    //  获取code查询openid
+    const code = getRequest().code;
+    api.getOpenId({ code }).then(res => {
+      that.userMsg = res.data;
+      setToken('openId', JSON.stringify(that.userMsg))
+    });
   },
   methods: {
     //  跳转详情页

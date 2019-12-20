@@ -37,7 +37,7 @@ export default [
         path: 'order',
         component: () => import('../views/user/order.vue'),
         meta: { hidden: false }
-      },
+      }
     ]
   },
   //  404

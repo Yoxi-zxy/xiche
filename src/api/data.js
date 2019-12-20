@@ -1,5 +1,26 @@
 import axios from './index'
 import qs from 'qs'
+//  获取openId
+const getOpenId = (params) => {
+  return axios.request({
+    url: 'getOpenId',
+    params
+  })
+}
+//  获取用户信息
+const getUserInfo = (params) => {
+  return axios.request({
+    url: 'getUserInfo',
+    params
+  })
+}
+//  公众号分享
+const share = (params) => {
+  return axios.request({
+    url: 'share',
+    params
+  })
+}
 //  商品列表
 const getProductList = (params) => {
   return axios.request({
@@ -55,6 +76,9 @@ const deleteOrder = (params) => {
   })
 }
 export default {
+  getOpenId,
+  getUserInfo,
+  share,
   getProductList,
   getProductReserve,
   getProduct,

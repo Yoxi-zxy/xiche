@@ -73,6 +73,7 @@
 <script>
 import { Tab, Tabs, Tabbar, TabbarItem, Button, Icon, Dialog } from 'vant';
 import api from '@/api/data';
+import { getToken } from '@/lib/util';
 export default {
   data () {
     return {
@@ -94,7 +95,9 @@ export default {
       ],
       status: '0',
       dataList: [],
-      show: false
+      show: false,
+      userMsg: null,
+      information: {}
     }
   },
   components: {
@@ -108,6 +111,18 @@ export default {
   },
   created () {
     this.getOrderList()
+  },
+  mounted () {
+    let that = this;
+    //  获取用户信息
+    that.userMsg = getToken(JSON.parse('openId'));
+    let params = {
+      openId: that.userMsg.openid,
+      accessToken: that.userMsg.access_token
+    };
+    api.getUserInfo(params).then(res => {
+      that.information = res.data
+    })
   },
   methods: {
     //  查询订单列表
